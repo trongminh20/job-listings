@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useState } from 'react';
+import JobList from './Components/JobList';
+//states
+import { AppContextProvider } from './Components/AppContext';
+//components
+import Header from './Components/Header';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContextProvider>
+      <Header />
+      <JobList />
+    </AppContextProvider>
   );
+
 }
 
 export default App;
