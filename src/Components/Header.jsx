@@ -15,7 +15,7 @@ const Header = () => {
         })
     }
     return (
-        <div>
+        <div className="header">
             <script>
                 {
                     window.onload = function () {
@@ -23,7 +23,7 @@ const Header = () => {
                     }
                 }
             </script>
-            <img src={headerBgUrl} alt="" />
+            <img className="header--bg" src={headerBgUrl} alt="" />
         </div>
     );
 }

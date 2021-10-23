@@ -7,6 +7,7 @@ const Item = (props) => {
     const [jobs, setJobs] = jobState;
     const [tags, setTags] = tagState;
 
+
     const filter = (e) => {
         let newList = [...data];
         //get value to be filtered
@@ -46,8 +47,10 @@ const Item = (props) => {
 
     }
 
+
+
     return (
-        <div className="list-item">
+        <div className="item">
             <div className="logo">
                 <img src={props._logo} alt="" />
             </div>

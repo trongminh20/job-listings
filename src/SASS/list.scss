@@ -1,8 +1,15 @@
 .job--list {
-    width: 80%;
+    @media (max-width: $mobile) {
+        width: 100%;
+    }
+    @media (min-width: $laptop) {
+        width: 100%;
+    }
+    @media (min-width: $desktop) {
+        width: 80%;
+    }
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
-
     @include flexDisplay(column, 1rem, center, "");
 }

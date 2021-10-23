@@ -1,0 +1,47 @@
+.tag--bar {
+    @include flexDisplay(row, 1rem, space-around, center);
+    .tag--list {
+        @include flexDisplay(row, 1rem, center, center);
+    }
+    margin: auto;
+    margin-top: 2rem;
+    background: white;
+    width: 90%;
+    height: 3rem;
+}
+
+.filter--tag {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
+    height: 1.5rem;
+    width: auto;
+    padding-left: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: $background;
+    border-radius: 5px;
+    p {
+        color: $dark--ciyan;
+    }
+    button {
+        border: none;
+        background-color: $dark--ciyan;
+        &:hover {
+            background-color: $dark--ciyan;
+        }
+        color: white;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 5px;
+    }
+}
+.clear--btn {
+    border: none;
+    background-color: none;
+    color: $dark--ciyan;
+    height: 3rem;
+    font-size: 1rem;
+}

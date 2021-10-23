@@ -1,13 +1,16 @@
-.list-item {
+.item {
     @include flexDisplay(row, 1rem, flex-start, center);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: 2px 5px 5px $dark--ciyan;
     @media (min-width: $laptop) {
         width: 90%;
     }
     @media (min-width: $desktop) {
-        width: 50%;
+        width: 60%;
     }
     @media (max-width: $mobile) {
-        width: 90%;
+        width: 80%;
     }
     margin: auto;
     background-color: white;
@@ -16,5 +19,9 @@
     .main-info {
     }
     .posting-info {
+    }
+    .tags {
+        @include flexDisplay(row, 0.5rem, flex-end, center);
+        flex-grow: 1;
     }
 }

@@ -8,7 +8,6 @@ const JobList = () => {
     const { jobState } = useContext(AppContext);
     const [jobs, setJobs] = jobState;
 
-
     return (
         <div className="job--list">
             {
