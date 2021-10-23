@@ -1,5 +1,5 @@
 # Live demo 
---- https://app.netlify.com/sites/minhphan-job-listing/settings/domain
+- https://minhphan-job-listing.netlify.app/
 
 # user story
 #### Your users should be able to:
