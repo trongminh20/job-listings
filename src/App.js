@@ -11,6 +11,7 @@ const App = () => {
       <Header />
       <FilterBar />
       <JobList />
+      <div> Coded by Minh Phan --- Design on <a href="https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt">FrontendMentor</a> </div>
     </AppContextProvider>
   );
 

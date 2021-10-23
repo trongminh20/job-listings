@@ -16,8 +16,9 @@ const JobList = () => {
                     ...j.tools, ...j.languages]
                     return <Item _logo={j.logo}
                         _company={j.company}
-                        _status={j.new}
-                        _feature={j.feature}
+                        _status={(j.new === true) ? "New" : ""}
+                        _inlineStyle={(j.featured === true) ? { borderLeft: "5px solid hsl(180, 29%, 50%)" } : {}}
+                        _feature={(j.featured === true) ? "Featured" : ""}
                         _postAt={j.postedAt}
                         _constract={j.contract}
                         _location={j.location}

@@ -50,15 +50,16 @@ const Item = (props) => {
 
 
     return (
-        <div className="item">
+        <div className="item" style={props._inlineStyle}>
             <div className="logo">
                 <img src={props._logo} alt="" />
             </div>
             <div className="main-info">
                 <div className="company-info">
                     <p>{props._company}</p>
-                    <div>{props._status}</div>
-                    <div>{props._feature}</div>
+                    {(props._status) ? <p className="status">{props._status}</p> : <></>}
+                    {(props._feature) ? <p className="featured">{props._feature}</p> : <></>
+                    }
                 </div>
                 <h4>{props._position}</h4>
                 <div className="posting-info">

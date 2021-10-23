@@ -64,15 +64,14 @@ const FilterBar = (props) => {
                             </div>
                         })}
                     </div>
-
+                    <button className="clear--btn" onClick={() => {
+                        clearAll()
+                    }}>Clear</button>
                 </div>
-                <button className="clear--btn" onClick={() => {
-                    clearAll()
-                }}>Clear</button>
             </div>
         );
     } else {
-        return <></>
+        return <></>;
     }
 }
 

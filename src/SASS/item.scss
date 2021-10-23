@@ -1,5 +1,9 @@
 .item {
     @include flexDisplay(row, 1rem, flex-start, center);
+    border-radius: 5px;
+    @media (max-width: $mobile) {
+        @include flexDisplay(column, 1rem, flex-start, flex-start);
+    }
     padding-left: 1rem;
     padding-right: 1rem;
     box-shadow: 2px 5px 5px $dark--ciyan;
@@ -11,12 +15,53 @@
     }
     @media (max-width: $mobile) {
         width: 80%;
+        height: 35vh;
+        position: relative;
+        margin-bottom: 2rem;
     }
     margin: auto;
     background-color: white;
+
     .logo {
+        @media (max-width: $mobile) {
+            position: absolute;
+            bottom: 80%;
+            left: 5%;
+            width: 5rem;
+        }
+        img {
+            width: 100%;
+        }
     }
     .main-info {
+        width: 100%;
+        @media (max-width: $mobile) {
+            border-bottom: 2px solid lightgray;
+        }
+        .company-info {
+            @include flexDisplay(row, 1rem, flex-start, center);
+            @media (max-width: $mobile) {
+                margin-top: 3rem;
+            }
+        }
+
+        .status,
+        .featured {
+            color: white;
+            height: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+        }
+        .status {
+            background-color: $dark--ciyan;
+            width: 3rem;
+        }
+        .featured {
+            background-color: $very--dark--grayish;
+            width: 5rem;
+        }
     }
     .posting-info {
     }
