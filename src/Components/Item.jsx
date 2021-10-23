@@ -1,8 +1,28 @@
 import React, { useContext } from 'react';
 import { AppContext } from './AppContext';
 import Tag from './Tag';
-
+import { data } from '../data';
 const Item = (props) => {
+    const { jobState } = useContext(AppContext);
+    const [jobs, setJobs] = jobState;
+    const filter = (e) => {
+        let newList = [...data];
+        let val = e.target.value;
+        let filtered = [];
+        newList.forEach(t => {
+            if (t.role === val) {
+                filtered.push(t)
+            }
+            if (t.tools.indexOf(val) !== -1) {
+                filtered.push(t);
+            }
+            if (t.languages.indexOf(val) !== -1) {
+                filtered.push(t);
+            }
+        })
+        setJobs(filtered);
+    }
+
     return (
         <div className="list-item">
             <div className="logo">
@@ -19,13 +39,13 @@ const Item = (props) => {
                     <p>{props._postAt} - {props._constract} - {props._location}</p>
                 </div>
             </div>
-
-            {
-                props._tags.map(t => {
-                    return <Tag _tagName={t} />
-                })
-            }
-
+            <div className="tags">
+                {
+                    props._tags.map(t => {
+                        return <Tag _tagName={t} _value={t} _tagFilter={filter} />
+                    })
+                }
+            </div>
         </div>
     )
 }

@@ -1,0 +1,8 @@
+.job--list {
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    @include flexDisplay(column, 1rem, center, "");
+}

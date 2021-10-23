@@ -10,18 +10,20 @@ const JobList = () => {
 
 
     return (
-        <div>
+        <div className="job--list">
             {
                 jobs.map(j => {
                     let tags = [j.role,
                     ...j.tools, ...j.languages]
-                    return <Item _company={j.company}
+                    return <Item _logo={j.logo}
+                        _company={j.company}
                         _status={j.new}
                         _feature={j.feature}
                         _postAt={j.postedAt}
                         _constract={j.contract}
                         _location={j.location}
-                        _position={j.position} _tags={tags} />
+                        _position={j.position}
+                        _tags={tags} />
                 })
             }
         </div>
