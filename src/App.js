@@ -4,11 +4,12 @@ import JobList from './Components/JobList';
 import { AppContextProvider } from './Components/AppContext';
 //components
 import Header from './Components/Header';
-
+import FilterBar from './Components/FilterBar';
 const App = () => {
   return (
     <AppContextProvider>
       <Header />
+      <FilterBar />
       <JobList />
     </AppContextProvider>
   );

@@ -8,11 +8,13 @@ export const AppContextProvider = (props) => {
     const [jobs, setJobs] = useState(data);
     //update header image when resize window
     const [headerBgUrl, setHeaderBgUrl] = useState((window.innerWidth < 799) ? './images/bg-header-mobile.svg' : './images/bg-header-desktop.svg');
+    const [tags, setTags] = useState([]);
 
     return (
         <AppContext.Provider value={{
             jobState: [jobs, setJobs],
-            headerState: [headerBgUrl, setHeaderBgUrl]
+            headerState: [headerBgUrl, setHeaderBgUrl],
+            tagState: [tags, setTags]
         }}>
             {props.children}
         </AppContext.Provider>
