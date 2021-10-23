@@ -55,13 +55,16 @@ const FilterBar = (props) => {
     if (tags.length !== 0) {
         return (
             <div className='tag--bar'>
-                <div className="tag--list">
-                    {tags.map(t => {
-                        return <div className="filter--tag">
-                            <p>{t}</p>
-                            <button onClick={delTag} value={t}>x</button>
-                        </div>
-                    })}
+                <div className='main--bar'>
+                    <div className="tag--list">
+                        {tags.map(t => {
+                            return <div className="filter--tag">
+                                <p>{t}</p>
+                                <button onClick={delTag} value={t}>x</button>
+                            </div>
+                        })}
+                    </div>
+
                 </div>
                 <button className="clear--btn" onClick={() => {
                     clearAll()
@@ -69,7 +72,7 @@ const FilterBar = (props) => {
             </div>
         );
     } else {
-        return <div className='tag--bar'></div>
+        return <></>
     }
 }
 

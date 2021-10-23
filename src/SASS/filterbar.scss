@@ -1,13 +1,21 @@
 .tag--bar {
-    @include flexDisplay(row, 1rem, space-around, center);
-    .tag--list {
-        @include flexDisplay(row, 1rem, center, center);
-    }
+    @include flexDisplay(row, 0px, center, center);
     margin: auto;
     margin-top: 2rem;
     background: white;
     width: 90%;
     height: 3rem;
+}
+.main--bar {
+    @include flexDisplay(row, 1rem, space-around, center);
+
+    .tag--list {
+        @include flexDisplay(row, 1rem, center, center);
+    }
+    margin: auto;
+    background: white;
+    width: 90%;
+    overflow: hidden;
 }
 
 .filter--tag {
